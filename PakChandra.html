@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitung Luas Persegi Panjang</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;    
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('WhatsApp Image 2024-08-08 at 09.41.20_a276fd1a.jpg'); /* You can specify your background image here */
+            background-size: cover;
+        }
+        .container {
+            text-align: center;
+            background-color: rgba(255, 0, 0, 0.8); /* Optional: to make the background semi-transparent */
+            padding: 20px;
+            border-radius: 10px;
+        }
+        input {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hitung Luas Persegi Panjang</h1>
+        <form>
+            <label for="panjang">Panjang</label><br>
+            <input type="text" id="panjang" name="panjang"><br>
+            <label for="lebar">Lebar</label><br>
+            <input type="text" id="lebar" name="lebar"><br><br>
+            <button type="button" onclick="hitung()">Hitung</button><br><br>
+            <input type="text" id="hasil" readonly>
+        </form>
+    </div>
+    <script>
+        function hitung() {
+            var panjang = document.getElementById("panjang").value;
+            var lebar = document.getElementById("lebar").value;
+            var hasil = panjang * lebar;
+            document.getElementById("hasil").value = hasil;
+        }
+    </script>
+</body>
+</html>
